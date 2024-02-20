@@ -1,1 +1,13 @@
 gRPC installation - https://grpc.io/docs/languages/go/quickstart/
+
+Creater docker image - docker build -f logger-service.dockerfile -t imrishuroy/logger-service:1.0.0 .
+docker push imrishuroy/logger-service:1.0.0
+
+Create docker swarm
+docker stack deploy -c swarm.yml gomico 
+
+Remove docker stack
+docker stack rm gomico
+
+Leave swarm
+docker swarm leave --force
